@@ -8,9 +8,10 @@ import com.google.gson.JsonParser;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.joda.time.DateTime;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -36,7 +37,7 @@ public class TradeDetail {
 
   private BigDecimal fee;
 
-  private Date time;
+  private DateTime time;
 
   public static List<TradeDetail> parse(String responseString) {
     final ApiResponse<List<TradeDetail>> apiResponse = new ApiResponse<>();
@@ -62,7 +63,7 @@ public class TradeDetail {
       item.setAmount(object.get("Amount").getAsBigDecimal());
       item.setTotal(object.get("Total").getAsBigDecimal());
       item.setFee(object.get("Fee").getAsBigDecimal());
-      item.setTime(new Date(object.get("TimeStamp").getAsLong()));
+      item.setTime(new DateTime(object.get("TimeStamp").getAsString()));
 
       results.add(item);
     }

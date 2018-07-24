@@ -9,9 +9,8 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>net.sealaek</groupId>
   <artifactId>cryptopia-java-api</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0.RELEASE</version>
 
   <properties>
     <okhttp.version>3.6.0</okhttp.version>
@@ -40,6 +39,18 @@
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
       <version>${gson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>joda-time</groupId>
+      <artifactId>joda-time</artifactId>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
